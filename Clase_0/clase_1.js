@@ -1,6 +1,6 @@
 let nombre = "Emanuel";
 let edad = 27;
-let serie = ["BMS"];
+let serie = ["BMS", "Naruto"];
 
 console.log(nombre, edad, serie);
 
