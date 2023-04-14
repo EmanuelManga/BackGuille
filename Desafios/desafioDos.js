@@ -61,6 +61,6 @@ producto.addProduct("League of Legends,", "es un videojuego multijugador de aren
 
 producto.addProduct();
 
-console.log(producto.getProducts());
+console.log("getProducts:", producto.getProducts());
 
-console.log(producto.getProductById(1));
+console.log("getProductsById:", producto.getProductById(1));
