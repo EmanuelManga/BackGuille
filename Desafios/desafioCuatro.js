@@ -77,6 +77,18 @@ class ProductManager {
         }
     }
 
+    deleteProduct(id) {
+        const products = this.#leerArchivo();
+        let existe = products.find((x) => x.producId == id);
+        if (existe) {
+            let newArray = products.filter((x) => x.producId != id);
+            this.#write(newArray);
+            return `Se elemino de la lista de productos: ${existe.title} ID ${existe.producId}`;
+        } else {
+            return `No Existe un producto con ID: ${id}`;
+        }
+    }
+
     #leerArchivo = () => {
         const productosString = fs.readFileSync(this.path, "utf-8");
         let products = [];
@@ -107,9 +119,13 @@ const producto = new ProductManager("products.json");
 producto.addProduct("Counter-Strike: Global Offensive", "es un videojuego de disparos en primera persona desarrollado por Valve Corporation y Hidden Path Entertainment", 15, "https://www.clarin.com/img/2021/11/25/dQJKs5qYm_2000x1500__1.jpg", "CS-GO", 25);
 // console.log(producto.getProducts());
 producto.addProduct("World of Warcraft", "es un videojuego de rol multijugador masivo en línea desarrollado por Blizzard Entertainment", 60, "static.wikia.nocookie.net/wow/images/7/7d/WoWlogo.png/revision/latest?cb=20090510204154&path-prefix=es", "WoW", 203);
+producto.addProduct("League of Legends,", "es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games", 0, "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg", "lol", 1000);
+producto.addProduct("League of Legends,", "es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games", 0, "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg", "lol", 1000);
 
 // console.log("getProductsById:", producto.getProductById(1));
 
-// console.log("updateProduct", producto.updateProduct(0, { title: "CS-GO", producId: 10 }));
+console.log("updateProduct", producto.updateProduct(0, { title: "CS-GO", producId: 10 }));
 
+console.log("getProducts:", producto.getProducts());
+console.log("getProducts:", producto.deleteProduct(1));
 console.log("getProducts:", producto.getProducts());
