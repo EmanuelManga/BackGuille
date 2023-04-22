@@ -32,13 +32,13 @@ class ProductManager {
         }
 
         let product = {
-            title: title, // (nombre del producto)
-            description: description, // (descripción del producto)
-            price: price, // (precio)
-            thumbnail: thumbnail, // (ruta de imagen)
-            code: code, // (código identificador)
-            stock: stock, // (número de piezas disponibles)
-            producId: producId,
+            title, // (nombre del producto)
+            description, // (descripción del producto)
+            price, // (precio)
+            thumbnail, // (ruta de imagen)
+            code, // (código identificador)
+            stock, // (número de piezas disponibles)
+            producId,
         };
 
         if (isValid) {
