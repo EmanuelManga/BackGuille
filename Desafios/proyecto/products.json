@@ -1,11 +1,11 @@
 [
     {
-        "title": "League of Legends,",
-        "description": "es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games",
-        "price": 0,
-        "thumbnail": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
-        "code": "lol",
-        "stock": 1000,
+        "title": "Counter-Strike: Global Offensive",
+        "description": "es un videojuego de disparos en primera persona desarrollado por Valve Corporation y Hidden Path Entertainment",
+        "price": 15,
+        "thumbnail": "https://www.clarin.com/img/2021/11/25/dQJKs5qYm_2000x1500__1.jpg",
+        "code": "CS-GO",
+        "stock": 25,
         "producId": 0
     },
     {
@@ -18,12 +18,12 @@
         "producId": 1
     },
     {
-        "title": "Counter-Strike: Global Offensive",
-        "description": "es un videojuego de disparos en primera persona desarrollado por Valve Corporation y Hidden Path Entertainment",
-        "price": 15,
-        "thumbnail": "https://www.clarin.com/img/2021/11/25/dQJKs5qYm_2000x1500__1.jpg",
-        "code": "CS-GO",
-        "stock": 25,
+        "title": "League of Legends,",
+        "description": "es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games",
+        "price": 0,
+        "thumbnail": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
+        "code": "lol",
+        "stock": 1000,
         "producId": 2
     }
 ]

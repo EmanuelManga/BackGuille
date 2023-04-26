@@ -62,6 +62,7 @@ app.get("/products/:pid", async (req, res) => {
     let pid = req.params.pid;
     let productos = await producto.getProducts();
     productos = productos.filter((x) => x.producId == pid);
+    productos.length == 0 ? productos.push({ error: `No se encuentra ningun producto con el id: ${pid}` }) : null;
     res.json(productos);
 });
 
