@@ -3,7 +3,7 @@ import { ProductManager, producto } from "./ProductManager.js";
 // console.log(express);
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // app.get("/", (req, res) => {
 //     res.send("Hello World!");
@@ -81,6 +81,38 @@ app.get("/cargar", async (req, res) => {
         "https://cdn.gamer-network.net/2020/usgamer/among-us-featured-image.jpg/EG11/thumbnail/1920x1080/format/jpg/quality/65/among-us-featured-image.jpg",
         "AU",
         30
+    );
+    await producto.addProduct(
+        "Overwatch",
+        "Un juego de disparos en línea y multijugador. Escoge a un héroe y lucha en equipos de seis para cumplir los objetivos del mapa.",
+        25,
+        "https://cdn.vox-cdn.com/thumbor/Z0ayAL-AV7zX4_c4tbKj0pkrqxo=/0x0:3840x2160/1200x800/filters:focal(1536x464:2192x1120)/cdn.vox-cdn.com/uploads/chorus_image/image/54632901/overwatch.0.jpg",
+        "OW",
+        15
+    );
+    await producto.addProduct(
+        "The Legend of Zelda: Breath of the Wild",
+        "Un juego de aventuras y acción en mundo abierto. Explora y sobrevive en el reino de Hyrule y derrota a Ganon.",
+        45,
+        "https://cdn.vox-cdn.com/thumbor/kqBDjjlzWdkS2HTxj0DQNhQOsjA=/0x0:2040x1360/1200x800/filters:focal(860x540:1180x860)/cdn.vox-cdn.com/uploads/chorus_image/image/63711877/botw_review.0.jpg",
+        "Zelda BotW",
+        8
+    );
+    await producto.addProduct(
+        "Dark Souls III",
+        "Un juego de acción y aventuras en tercera persona. Sobrevive en un mundo oscuro y peligroso, lucha contra jefes épicos y consigue almas.",
+        20,
+        "https://cdn.vox-cdn.com/thumbor/mN7Mny2flBb5o5n5Q5AjLlRkEAs=/0x0:1920x1080/1200x800/filters:focal(811x58:1123x370)/cdn.vox-cdn.com/uploads/chorus_image/image/49303103/darksoulsiii_screen_01_1920.0.jpg",
+        "DS III",
+        12
+    );
+    await producto.addProduct(
+        "Halo Infinite",
+        "Un juego de disparos en primera persona en mundo abierto. Encarna al Jefe Maestro y lucha contra los Banished en el anillo de Zeta Halo.",
+        70,
+        "https://cdn.vox-cdn.com/thumbor/OMMubz4a4NVLunFLkQOZvHdC9Xk=/0x0:3840x2160/1200x800/filters:focal(1536x463:2192x1119)/cdn.vox-cdn.com/uploads/chorus_image/image/69214020/HaloInfinite_8K_003.0.jpg",
+        "Halo Inf.",
+        5
     );
     await producto.addProduct("FIFA 22", "Un juego de deportes de fútbol en línea y multijugador. Escoge a tu equipo y juega partidos en línea contra otros jugadores.", 60, "https://i.ytimg.com/vi/n5g5TvH5nFg/maxresdefault.jpg", "FIFA 22", 5);
 
