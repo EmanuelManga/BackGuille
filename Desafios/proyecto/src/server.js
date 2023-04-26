@@ -87,10 +87,6 @@ app.get("/cargar", async (req, res) => {
     res.send("Hola mundo!");
 });
 
-app.get("/saluda", (req, res) => {
-    res.send("Hola mundo!");
-});
-
 app.get("/products", async (req, res) => {
     let limit = req.query.limit;
     let productos = await producto.getProducts();
