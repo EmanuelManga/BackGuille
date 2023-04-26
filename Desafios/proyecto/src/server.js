@@ -84,7 +84,8 @@ app.get("/cargar", async (req, res) => {
     );
     await producto.addProduct("FIFA 22", "Un juego de deportes de fútbol en línea y multijugador. Escoge a tu equipo y juega partidos en línea contra otros jugadores.", 60, "https://i.ytimg.com/vi/n5g5TvH5nFg/maxresdefault.jpg", "FIFA 22", 5);
 
-    res.send("Hola mundo!");
+    let productos = await producto.getProducts();
+    res.json(productos);
 });
 
 app.get("/products", async (req, res) => {
