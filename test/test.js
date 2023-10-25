@@ -1,49 +1,11 @@
-const array = [
-    {
-        title: "World of Warcraft",
-        description: "es un videojuego de rol multijugador masivo en línea desarrollado por Blizzard Entertainment",
-        price: 60,
-        thumbnail: "static.wikia.nocookie.net/wow/images/7/7d/WoWlogo.png/revision/latest?cb=20090510204154&path-prefix=es",
-        code: "WoW",
-        stock: 203,
-        producId: 1,
-    },
-    {
-        title: "awdawdaw",
-        description: "es un videojuego de disparos en primera persona desarrollado por Valve Corporation y Hidden Path Entertainment",
-        price: 15,
-        thumbnail: "https://www.clarin.com/img/2021/11/25/dQJKs5qYm_2000x1500__1.jpg",
-        code: "CS-GO",
-        stock: 25,
-        producId: 0,
-    },
-    {
-        title: "League of Legends,",
-        description: "es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games",
-        price: 0,
-        thumbnail: "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
-        code: "lol",
-        stock: 1000,
-        producId: 2,
-    },
-];
+let array = { cartId: "87f7dc26-fafa-4871-b880-8aac76e95c57", products: [{ productId: "797d10e3-3a0b-4eae-a340-1274c66a7154", quantity: 4 }] };
 
-// let existe = array.find((x) => x.producId == 10);
-// let newArray = array.filter((x) => x.producId != 10);
+let productId = "ef6d8831-c4b7-4bf1-8fe7-5e348420a192";
+// let productId = "797d10e3-3a0b-4eae-a340-1274c66a7154";
 
-const borrar = (id) => {
-    if (array.find((x) => x.producId == id)) {
-        return (newArray = array.filter((x) => x.producId != id));
-    } else {
-        return `No Existe un producto con ID: ${id}`;
-    }
-};
+let aProduct = array.products;
+console.log(aProduct);
 
-const returnTernario = (mensaje) => {
-    return mensaje;
-};
+let existeProd = aProduct.filter((x) => x.productId == productId);
 
-// console.log("existe", existe);
-// console.log("newArray", newArray);
-
-console.log(borrar(1));
+console.log(existeProd);
